@@ -11,17 +11,21 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Slider from '~/components/Slider.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Announce me',
   ignoreTitleTemplate: true,
+  
 };
 ---
 
 <Layout metadata={metadata}>
+ <Slider />
   <!-- Hero Widget ******************* -->
 
   <Hero
+  
     actions={[
       {
         variant: 'primary',
@@ -32,8 +36,10 @@ const metadata = {
       },
       { text: 'Learn more', href: '#features' },
     ]}
+    
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
+  
     <Fragment slot="title">
       Free template for <span class="hidden xl:inline">creating websites with</span>
       <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
