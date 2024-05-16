@@ -1,23 +1,42 @@
 ---
-
+// No hay importaciones necesarias para este componente simple.
 ---
-
-<div
-  class="dark text-muted text-sm bg-black dark:bg-transparent dark:border-b dark:border-slate-800 dark:text-slate-400 hidden md:flex gap-1 overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
->
-  <span
-    class="dark:bg-slate-700 bg-white/40 dark:text-slate-300 font-semibold px-1 py-0.5 text-xs mr-0.5 rtl:mr-0 rtl:ml-0.5 inline-block"
-    >NEW</span
-  >
-  <a href="https://astro.build/blog/astro-470/" class="text-muted hover:underline dark:text-slate-400 font-medium"
-    >Astro 4.7 is now available! »</a
-  >
+<div class="relative overflow-hidden px-3 py-2 bg-black text-white hidden md:flex items-center gap-1">
+  <span class="bg-white text-black font-semibold px-1 py-0.5 text-xs mr-0.5 inline-block">NEW</span>
+  <a href="#" id="ticker-link" class="hover:underline flex-grow">
+    ¡Bienvenidos a Annouce Me!
+  </a>
   <a
     target="_blank"
     rel="noopener"
-    class="ltr:ml-auto rtl:mr-auto w-[5.6rem] h-[1.25rem] ml-auto bg-contain inline-block bg-[url(https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=Stars&maxAge=86400)]"
+    class="ml-auto w-6 h-6 bg-contain bg-[url('https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=Stars&maxAge=86400')] no-repeat center"
     title="If you like AstroWind, give us a star."
     href="https://github.com/onwidget/astrowind"
   >
   </a>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const messages = [
+    "Astro 4.7 is now available!",
+    "Check out our latest features on our blog.",
+    "Learn more about Astro's new integrations."
+  ];
+  const tickerLink = document.getElementById('ticker-link');
+
+  if (tickerLink) { // Comprobar si tickerLink no es null
+    let currentMessage = 0;
+
+    setInterval(() => {
+      tickerLink.textContent = messages[currentMessage];
+      currentMessage = (currentMessage + 1) % messages.length;
+    }, 3000); // Cambia cada 3000 ms o 3 segundos
+  }
+});
+
+</script>
+
+<style>
+  /* Aquí podrías añadir estilos adicionales si es necesario */
+</style>
