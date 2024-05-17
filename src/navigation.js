@@ -115,7 +115,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Contacto', href: '/contact/', target: '_blank' }]
+  actions: [{ text: 'Contacto', href: '/contact', target: '_blank' }]
 };
 
 export const footerData = {
