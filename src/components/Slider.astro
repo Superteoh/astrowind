@@ -1,122 +1,110 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-
 ---
 
-
 <Layout>
-    <div class="swiper-container mx-auto">
-      <div class="swiper-wrapper" id="my-slider">
-        <div class="swiper-slide">
-            <div class="text-center">
-              <img src="src/assets/images/desarrolloweb.webp" data-pswp-width="9800" data-pswp-height="3800">
-              <b style="font-size: 2em;">Desarrollo Web</b>
-              <b style="font-size: 0.7em;">Programación personalizada de tu presencia online: web corporativa, ecommerce, hosting profesional</b>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-            <div class="text-center">
-              <img src="src/assets/images/rrss.webp" alt="">
-              <b style="font-size: 2em;">Redes Sociales</b>
-              <b style="font-size: 0.7em;">Creamos contenidos de alta calidad destinados a maximizar los resultados de tu estrategia de comunicación online</b>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-            <div class="text-center">
-              <img src="src/assets/images/seo.webp" alt="">
-              <b style="font-size: 2em;">SEO</b>
-              <b style="font-size: 0.7em;">Te ayudamos a mejorar el posicionamiento de tu sitio web en buscadores para que los clientes te encuentren</b>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-              <img src="src/assets/images/blogs.webp" alt="">
-              <b style="font-size: 2em;">Redacción de Copy y Blog</b>
-              <b style="font-size: 0.7em;">Comunicamos la esencia de tu marca y de tu negocio para llegar a tu público objetivo con el mensaje clave</b>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-            <div class="text-center">
-              <img src="src/assets/images/googleads.webp" alt="">
-              <b style="font-size: 2em;">Google Ads</b>
-              <b style="font-size: 0.7em;">Desarrollamos campañas altamente efectivas de Google Ads para atraer clientes a tu sitio web de manera constante</b>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-            <div class="text-center">
-              <img src="src/assets/images/networking.webp" alt="">
-              <b style="font-size: 2em;">Networking para profesionales</b>
-              <b style="font-size: 0.7em;">La colaboración entre empresas y socios es parte de nuestra esencia en Announceme. ¡Llegamos más lejos en equipo!</b>
-            </div>
+  <div class="swiper-container mx-auto">
+    <div class="swiper-wrapper" id="my-slider">
+      <div class="swiper-slide">
+        <div class="text-center">
+          <img src="src/assets/images/desarrolloweb.webp" data-pswp-width="9800" data-pswp-height="3800" alt="Desarrollo Web">
+          <b style="font-size: 2em;">Desarrollo Web</b>
+          <b style="font-size: 0.7em;">Programación personalizada de tu presencia online: web corporativa, ecommerce, hosting profesional</b>
         </div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </a>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <img src="src/assets/images/rrss.webp" alt="Redes Sociales">
+          <b style="font-size: 2em;">Redes Sociales</b>
+          <b style="font-size: 0.7em;">Creamos contenidos de alta calidad destinados a maximizar los resultados de tu estrategia de comunicación online</b>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <img src="src/assets/images/seo.webp" alt="SEO">
+          <b style="font-size: 2em;">SEO</b>
+          <b style="font-size: 0.7em;">Te ayudamos a mejorar el posicionamiento de tu sitio web en buscadores para que los clientes te encuentren</b>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <img src="src/assets/images/blogs.webp" alt="Redacción de Copy y Blog">
+          <b style="font-size: 2em;">Redacción de Copy y Blog</b>
+          <b style="font-size: 0.7em;">Comunicamos la esencia de tu marca y de tu negocio para llegar a tu público objetivo con el mensaje clave</b>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <img src="src/assets/images/googleads.webp" alt="Google Ads">
+          <b style="font-size: 2em;">Google Ads</b>
+          <b style="font-size: 0.7em;">Desarrollamos campañas altamente efectivas de Google Ads para atraer clientes a tu sitio web de manera constante</b>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <img src="src/assets/images/networking.webp" alt="Networking para profesionales">
+          <b style="font-size: 2em;">Networking para profesionales</b>
+          <b style="font-size: 0.7em;">La colaboración entre empresas y socios es parte de nuestra esencia en Announceme. ¡Llegamos más lejos en equipo!</b>
+        </div>
+      </div>
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
 </Layout>
-  
-  <script>
-    import Swiper from 'swiper';
-    import 'swiper/css';
-    import { Navigation } from "swiper/modules";
-    import "swiper/css/navigation";
-     
-    export default {
-      async mounted() {
-        const swiper = new Swiper(".swiper-container", {
-          modules: [Navigation], 
-          slidesPerView: 'auto', 
-          centeredSlides: true,  
-          spaceBetween: 40,      
-          navigation: {          
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-          }
-        });
-        
-      }
-    }
-  </script>
-  
-  <style>
-    .swiper-container {
-      width: 80%; 
-      max-width: 800px; 
-      height: 300px; 
-      margin: 0 auto; 
-      border: 1px solid #ccc; 
-      border-radius: 10px; 
-      overflow: hidden; 
-    }
-  
-    .swiper-slide {
-      position: relative; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      width: 100%; 
-    }
-  
-    .swiper-slide img {
-      max-width: 100%; 
-      height: auto; 
-    }
-  
-    .swiper-slide b {
-      position: absolute; 
-      bottom: 20px; 
-      left: 20px; 
-      color: white; 
-      font-weight: bold; 
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
-      z-index: 1; 
-    }
-  
-    /* Estilos restantes */
-  </style>
-  
+
+<script>
+  import Swiper from 'swiper/bundle';
+  import 'swiper/css/bundle';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 40,
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+    });
+  });
+</script>
+
+<style>
+  .swiper-container {
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .swiper-slide b {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: #000;
+  }
+</style>
