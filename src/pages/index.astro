@@ -18,12 +18,12 @@ const metadata = {
 const actions = [
   {
     variant: 'primary',
-    text: 'Get template',
-    href: 'https://github.com/onwidget/astrowind',
+    text: 'Servicios',
+    href: '/services',
     target: '_blank',
-    icon: 'tabler:download',
+    icon: 'tabler:briefcase',
   },
-  { text: 'Learn more', href: '#features' },
+  { text: 'Sobre nosotros', href: '/about' },
 ];
 
 const media = {
@@ -39,18 +39,14 @@ const media = {
   <!-- Hero Widget ******************* -->
   <Hero actions={actions} media={media}>
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      Bienvenid@ a la web <span class="hidden xl:inline">de</span>
+      <span class="text-accent dark:text-white highlight"> ANNOUNCE ME:</span> tu socio estratégico del mundo digital
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.
+      En <span class="font-semibold">Announce me</span> nos especializamos en ofrecer una gama completa de servicios diseñados para potenciar tu presencia en línea y ayudarte a alcanzar tus objetivos comerciales. Nuestra experiencia y dedicación nos permiten ofrecer soluciones personalizadas para nuestros clientes.
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
     </Fragment>
   </Hero>
 
@@ -203,20 +199,19 @@ const media = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Contacto',
+        href: '/contact',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:mail',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Announce me&nbsp;&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      En Announce Me, estamos comprometidos a impulsar tu éxito digital con soluciones innovadoras y efectivas. ¡Contáctanos hoy y descubre cómo podemos ayudarte a destacar en el mundo digital!
     </Fragment>
   </CallToAction>
 </Layout>
