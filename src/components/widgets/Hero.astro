@@ -10,7 +10,7 @@ export interface Props {
   tagline?: string;
   content?: string;
   actions?: string | CallToAction[];
-  image?: string | unknown; // TODO: find HTMLElementProps
+  media?: { src: string; alt: string; type: 'image' | 'gif' }; // Asegúrate de que el tipo sea correcto
 }
 
 const {
@@ -20,7 +20,7 @@ const {
   tagline,
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
-  image = await Astro.slots.render('image'),
+  media,
 } = Astro.props;
 ---
 
@@ -29,27 +29,23 @@ const {
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
     <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
     <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-        {
-          tagline && (
+      <div class="flex flex-wrap md:flex-nowrap items-center">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto md:w-1/2">
+          {tagline && (
             <p
               class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
               set:html={tagline}
             />
-          )
-        }
-        {
-          title && (
+          )}
+          {title && (
             <h1
               class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
               set:html={title}
             />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          {
-            actions && (
+          )}
+          <div class="max-w-3xl mx-auto">
+            {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+            {actions && (
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
                 {Array.isArray(actions) ? (
                   actions.map((action) => (
@@ -61,32 +57,62 @@ const {
                   <Fragment set:html={actions} />
                 )}
               </div>
-            )
-          }
+            )}
+          </div>
+          {content && <Fragment set:html={content} />}
         </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div>
-        {
-          image && (
+        <div class="w-full md:w-1/2 flex justify-center items-center">
+          {media && (
             <div class="relative m-auto max-w-5xl">
-              {typeof image === 'string' ? (
-                <Fragment set:html={image} />
-              ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  widths={[400, 768, 1024, 2040]}
-                  sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
-                  loading="eager"
-                  width={1024}
-                  height={576}
-                  {...image}
-                />
-              )}
+              {media.type === 'image' || media.type === 'gif' ? (
+                <img src={media.src} alt={media.alt} class="hero-image mx-auto rounded-md w-full" />
+              ) : null}
             </div>
-          )
-        }
+          )}
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .hero-content {
+    flex: 1 1 45%;
+  }
+
+  .hero-media {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+</style>
