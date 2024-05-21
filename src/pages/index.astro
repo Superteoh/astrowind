@@ -23,7 +23,12 @@ const actions = [
     target: '_blank',
     icon: 'tabler:briefcase',
   },
-  { text: 'Sobre nosotros', href: '/about' },
+  { 
+    variant:'secondary',
+    text: 'Sobre nosotros', 
+    href: '/about', 
+    target: '_blank',
+  },
 ];
 
 const media = {
@@ -34,8 +39,7 @@ const media = {
 ---
 
 <Layout metadata={metadata}>
-  <Slider />
-
+  
   <!-- Hero Widget ******************* -->
   <Hero actions={actions} media={media}>
     <Fragment slot="title">
@@ -50,11 +54,14 @@ const media = {
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-  <Note />
+   <!-- Note Widget ******************* -->
+   <Note />
+
+   <!-- Slider ******************* -->
+  <Slider />
 
   <!-- Features Widget *************** -->
-  <Features
+  <!-- <Features
     id="features"
     tagline="Features"
     title="What you get with AstroWind"
@@ -97,7 +104,7 @@ const media = {
         icon: 'tabler:bulb',
       },
     ]}
-  />
+  /> -->
 
   <!-- Features2 Widget ************** -->
   <Features2
@@ -146,13 +153,13 @@ const media = {
   </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
                         Astro is a very interesting technology. Thanks.
                 `}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
   <FAQs
@@ -185,14 +192,14 @@ const media = {
   />
 
   <!-- Stats Widget ****************** -->
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
       { title: 'Stars', amount: '24.8K' },
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
   <CallToAction
@@ -212,6 +219,9 @@ const media = {
 
     <Fragment slot="subtitle">
       En Announce Me, estamos comprometidos a impulsar tu éxito digital con soluciones innovadoras y efectivas. ¡Contáctanos hoy y descubre cómo podemos ayudarte a destacar en el mundo digital!
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </CallToAction>
 </Layout>

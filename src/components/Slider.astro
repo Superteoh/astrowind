@@ -3,54 +3,56 @@ import Layout from '~/layouts/Layout.astro';
 ---
 
 <Layout>
-  <div class="swiper-container mx-auto">
+<div class="slider">
+  <div class="swiper-container">
     <div class="swiper-wrapper" id="my-slider">
       <div class="swiper-slide">
         <div class="text-center">
-          <img src="src/assets/images/desarrolloweb.webp" data-pswp-width="9800" data-pswp-height="3800" alt="Desarrollo Web">
-          <b style="font-size: 2em;">Desarrollo Web</b>
-          <b style="font-size: 0.7em;">Programación personalizada de tu presencia online: web corporativa, ecommerce, hosting profesional</b>
+          <img src="src/assets/images/desarrolloweb.webp" alt="Desarrollo Web">
+          <b style="font-size: 2em; margin-bottom: 0.5rem;">Desarrollo Web</b>
+          <b style="font-size: 0.9em;">Programación personalizada de tu presencia online: web corporativa, ecommerce, hosting profesional</b>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="text-center">
-          <img src="src/assets/images/rrss.webp" alt="Redes Sociales">
-          <b style="font-size: 2em;">Redes Sociales</b>
-          <b style="font-size: 0.7em;">Creamos contenidos de alta calidad destinados a maximizar los resultados de tu estrategia de comunicación online</b>
+          <img src="src/assets/images/rrss.jpg" alt="Redes Sociales">
+          <b style="font-size: 2em; margin-bottom: 0.5rem;">Redes Sociales</b>
+          <b style="font-size: 0.9em;">Creamos contenidos de alta calidad destinados a maximizar los resultados de tu estrategia de comunicación online</b>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="text-center">
           <img src="src/assets/images/seo.webp" alt="SEO">
-          <b style="font-size: 2em;">SEO</b>
-          <b style="font-size: 0.7em;">Te ayudamos a mejorar el posicionamiento de tu sitio web en buscadores para que los clientes te encuentren</b>
+          <b style="font-size: 2em; margin-bottom: 0.5rem;">SEO</b>
+          <b style="font-size: 0.9em;">Te ayudamos a mejorar el posicionamiento de tu sitio web en buscadores para que los clientes te encuentren</b>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="text-center">
           <img src="src/assets/images/blogs.webp" alt="Redacción de Copy y Blog">
-          <b style="font-size: 2em;">Redacción de Copy y Blog</b>
-          <b style="font-size: 0.7em;">Comunicamos la esencia de tu marca y de tu negocio para llegar a tu público objetivo con el mensaje clave</b>
+          <b style="font-size: 2em; margin-bottom: 0.5rem;">Redacción de Copy y Blog</b>
+          <b style="font-size: 0.9em;">Comunicamos la esencia de tu marca y de tu negocio para llegar a tu público objetivo con el mensaje clave</b>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="text-center">
           <img src="src/assets/images/googleads.webp" alt="Google Ads">
-          <b style="font-size: 2em;">Google Ads</b>
-          <b style="font-size: 0.7em;">Desarrollamos campañas altamente efectivas de Google Ads para atraer clientes a tu sitio web de manera constante</b>
+          <b style="font-size: 2em; margin-bottom: 0.5rem;">Google Ads</b>
+          <b style="font-size: 0.9em;">Desarrollamos campañas altamente efectivas de Google Ads para atraer clientes a tu sitio web de manera constante</b>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="text-center">
           <img src="src/assets/images/networking.webp" alt="Networking para profesionales">
-          <b style="font-size: 2em;">Networking para profesionales</b>
-          <b style="font-size: 0.7em;">La colaboración entre empresas y socios es parte de nuestra esencia en Announceme. ¡Llegamos más lejos en equipo!</b>
+          <b style="font-size: 2em; margin-bottom: 0.5rem;">Networking para profesionales</b>
+          <b style="font-size: 0.9em;">La colaboración entre empresas y socios es parte de nuestra esencia en Announceme. ¡Llegamos más lejos en equipo!</b>
         </div>
       </div>
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
+</div>
 </Layout>
 
 <script>
@@ -71,10 +73,16 @@ import Layout from '~/layouts/Layout.astro';
 </script>
 
 <style>
+
+  .slider {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+  }
   .swiper-container {
-    width: 80%;
+    width: 90%;
     max-width: 800px;
-    height: 300px;
+    height: 400px;
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -104,7 +112,22 @@ import Layout from '~/layouts/Layout.astro';
     z-index: 1;
   }
 
-  .swiper-button-prev, .swiper-button-next {
-    color: #000;
+  .swiper-button-prev{
+    /* left: 10px; */
+    margin-left: 10px;
   }
+
+  .swiper-button-next {
+    /* color: var(--gray-100); */
+    /* right: 10px; */
+    margin-right: 10px;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Asegura que los botones estén encima de los slides */
+  }
+ 
 </style>
