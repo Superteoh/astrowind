@@ -36,7 +36,9 @@ const { language, textDirection } = I18N;
     <SiteVerification />
     <Analytics />
 
-    <!-- Comment the line below to disable View Transitions -->
+    <!-- Enlace al archivo CSS de Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css">
+
     <ViewTransitions fallback="swap" />
   </head>
 
@@ -50,5 +52,8 @@ const { language, textDirection } = I18N;
         content-visibility: auto;
       }
     </style>
+
+  <!-- cookies -->
+  <script type="module" src="/src/cookieconsent-config.js"></script>
   </body>
 </html>

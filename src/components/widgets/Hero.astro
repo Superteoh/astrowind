@@ -1,5 +1,5 @@
 ---
-import Image from '~/components/common/Image.astro';
+// import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import type { CallToAction } from '~/types';
 
@@ -10,7 +10,7 @@ export interface Props {
   tagline?: string;
   content?: string;
   actions?: string | CallToAction[];
-  media?: { src: string; alt: string; type: 'image' | 'gif' }; // Asegúrate de que el tipo sea correcto
+  media?: { src: string; alt: string; type: 'image' | 'gif' };
 }
 
 const {

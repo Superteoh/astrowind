@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+
 
 const metadata = {
   title: 'Contact',
@@ -13,7 +13,6 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText tagline="Contactar" title="Contacta con nosotros" />
-
   <ContactUs
     id="form"
     title="Envíanos un mensaje!"
@@ -38,42 +37,5 @@ const metadata = {
         'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
     }}
     description="Nuestro equipo de soporte suele responder en un plazo de 24 horas."
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Aquí podemos ayudarte!"
-    items={[
-      {
-        title: 'Soporte general',
-        description: `Chatea con nosotros para consultas relacionadas con la administración de cuentas, navegación del sitio web, problemas de pago o preguntas generales sobre la funcionalidad del sitio web.`,
-      },
-      {
-        title: 'Contacto ventas',
-        description:
-          'Chatea con nosotros para preguntas sobre compras, opciones de personalización, etc.',
-      },
-      {
-        title: 'Soporte técnico',
-        description:
-          'Chatea con nosotras para consultas relacionadas con incompatibilidad de software o errores de descargar.',
-      },
-      {
-        title: 'Phone',
-        description: '+34 666 666 666',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: 'Madrid, España',
-        icon: 'tabler:map-pin',
-      },
-    ]}
   />
 </Layout>

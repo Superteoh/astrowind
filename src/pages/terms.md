@@ -1,35 +1,36 @@
 ---
-title: 'Terms and Conditions'
+title: 'Términos y Condiciones'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Última moficación_: Enero 06, 2023
 
-Please read these terms and conditions carefully before using Our Service.
+Lea atentamente estas condiciones antes de utilizar nuestro servicio.
 
-## Interpretation and Definitions
+## Interpretación y Definiciones
 
-### Interpretation
+### Interpretación
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+Las palabras cuya inicial aparece en mayúscula tienen los significados que se definen a continuación. Las siguientes definiciones tendrán el mismo significado independientemente de que aparezcan en singular o en plural.
 
-### Definitions
+### Definiciones
 
-For the purposes of these Terms and Conditions:
+A los efectos de las presentes Condiciones Generales:
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+- **Afiliado** significa una entidad que controla, es controlada por o está bajo control común con una parte, donde «control» significa la propiedad del 50% o más de las acciones, participaciones u otros valores con derecho a voto para la elección de directores u otra autoridad de gestión.
 
-- **Country** refers to: California, United States
+- **País** se refiere a: Madrid, España.
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
+- **Compañía** (se denomina a "la Compañía", "Nosotros", "Nos" or "Nuestro" en el presente Acuerdo) se 
+refiere a AstroWind LLC, 1 Cupertino, CA 95014.
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+- **Dispositivo** se entiende cualquier dispositivo que pueda acceder al Servicio, como un ordenador, un teléfono móvil o una tableta digital.
 
 - **Service** refers to the Website.
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+- **Términos y Condiciones** (también denominados «Términos») se refieren a estos Términos y Condiciones que forman el acuerdo completo entre Usted y la Empresa en relación con el uso del Servicio. Este acuerdo de Términos y Condiciones es una Demo.
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+- Por **Servicio de redes sociales de terceros** se entiende cualquier servicio o contenido (incluidos datos, información, productos o servicios) proporcionado por un tercero que pueda mostrarse, incluirse o ponerse a disposición a través del Servicio.
 
 - **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
 
