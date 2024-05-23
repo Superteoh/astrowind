@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -9,31 +9,6 @@ export const headerData = {
     {
       text: 'Servicios',
       href: '/services',
-    },
-    {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
     },
   ],
   actions: [{ text: 'Contacto', href: '/contact', target: '_blank' }]
@@ -46,7 +21,6 @@ export const footerData = {
       links: [
         { text: 'Features', href: '#' },
         { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
       ],
     },
     {
@@ -54,7 +28,6 @@ export const footerData = {
       links: [
         { text: 'Developer API', href: '#' },
         { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
       ],
     },
     {
@@ -62,7 +35,6 @@ export const footerData = {
       links: [
         { text: 'Docs', href: '#' },
         { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
       ],
     },
   ],

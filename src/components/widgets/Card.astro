@@ -1,0 +1,53 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	imagen: string;
+  href: string;
+}
+
+const { imagen, title, body, href } = Astro.props;
+---
+
+<li class="card border border-gray-300 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+  <a href={href} class="block" target="_blank">
+    <img src={imagen} alt={title} class="w-full h-48 object-cover" />
+    <div class="p-4">
+      <h2 class="text-xl font-bold">{title}</h2>
+      <p class="mt-2 text-ml text-gray-700">{body}</p>
+    </div>
+  </a>
+</li>
+
+
+<style>
+	 .card {
+    list-style: none;
+    margin: 20px;
+    /* max-width: 320px; */
+    transition: transform 0.2s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card img {
+    border-radius: 7px 7px 0 0;
+    width: 100%;
+  }
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+
+	h2 {
+		margin: 8px;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+	}
+</style>
