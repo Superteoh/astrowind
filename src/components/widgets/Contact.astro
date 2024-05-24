@@ -1,5 +1,4 @@
 ---
-import FormContainer from '~/components/ui/Form.astro';
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Contact as Props } from '~/types';
@@ -11,7 +10,6 @@ const {
   inputs,
   textarea,
   disclaimer,
-  button,
   description,
 
   id,
@@ -24,17 +22,37 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  {
-    inputs && (
-      <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
-        <FormContainer
-          inputs={inputs}
-          textarea={textarea}
-          disclaimer={disclaimer}
-          button={button}
-          description={description}
-        />
-      </div>
-    )
-  }
+  {inputs && (
+    <form method="POST" class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
+      {inputs.map((input) => (
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">{input.label}</label>
+          <input
+            type={input.type}
+            name={input.name}
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200"
+          />
+        </div>
+      ))}
+      {textarea && (
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-200">{textarea.label}</label>
+          <textarea
+            name="message"
+            rows="4"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200"
+          ></textarea>
+        </div>
+      )}
+      {disclaimer && (
+        <div class="mb-4">
+          <p class="text-sm text-gray-500 dark:text-gray-400">{disclaimer.label}</p>
+        </div>
+      )}
+      <button type="submit" class="mt-4 w-full bg-blue-600 text-white rounded-md py-2 px-4">
+        Enviar
+      </button>
+      <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">{description}</p>
+    </form>
+  )}
 </WidgetWrapper>

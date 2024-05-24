@@ -26,6 +26,7 @@
     "astro": "^4.7.1",
     "astro-embed": "^0.7.2",
     "astro-icon": "^1.1.0",
+    "dotenv": "^16.4.5",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
     "nodemailer": "^6.9.13",
