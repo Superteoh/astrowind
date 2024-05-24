@@ -9,12 +9,18 @@ import Layout from '~/layouts/PageLayout.astro';
 const metadata = {
   title: 'Sobre nosotros',
 };
+
+const media = {
+  src: 'https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2021/05/oficina-2345327.jpg?tf=3840x',
+  alt: 'Oficina Announce me',
+  type: 'image',
+};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero tagline="Sobre nosotros">
+  <Hero tagline="Sobre nosotros" media={media}>
     <Fragment slot="title">
       Eleva tu presencia online con nuestras <br />
       <span class="text-accent dark:text-white highlight"> Hermosas Plantillas Web</span>
