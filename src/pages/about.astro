@@ -7,64 +7,60 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'Sobre nosotros',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About us"
-  >
+  <Hero tagline="Sobre nosotros">
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Eleva tu presencia online con nuestras <br />
+      <span class="text-accent dark:text-white highlight"> Hermosas Plantillas Web</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      En Announce Me, nos dedicamos a proporcionar soluciones digitales integrales para potenciar tu negocio. Con nuestras plantillas web, aseguramos que tu presencia online sea atractiva, funcional y efectiva.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Estadísticas sobre nosotros"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Oficinas', amount: '4' },
+      { title: 'Empleados', amount: '248' },
+      { title: 'Plantillas', amount: '12' },
+      { title: 'Premios', amount: '24' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Nuestras plantillas"
+    subtitle="Ofrecemos una variedad de plantillas diseñadas para diferentes industrias y necesidades."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Educacional',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+          'Plantillas diseñadas para instituciones educativas que buscan una presencia en línea profesional y atractiva.',
         icon: 'tabler:template',
       },
       {
-        title: 'Interior Design',
+        title: 'Diseño Interior',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+          'Ideal para estudios de diseño interior que desean mostrar su portafolio y atraer nuevos clientes.',
         icon: 'tabler:template',
       },
       {
-        title: 'Photography',
+        title: 'Fotografía',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+          'Perfecta para fotógrafos que quieren exhibir sus trabajos de manera visualmente impactante.',
         icon: 'tabler:template',
       },
     ]}
@@ -79,66 +75,66 @@ const metadata = {
       {
         title: 'E-commerce',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+          'Plantillas optimizadas para tiendas en línea, ofreciendo una experiencia de compra fluida y atractiva.',
         icon: 'tabler:template',
       },
       {
         title: 'Blog',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
+          'Diseños pensados para bloggers que necesitan un espacio elegante y funcional para compartir sus ideas.',
         icon: 'tabler:template',
       },
       {
-        title: 'Business',
+        title: 'Negocios',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
+          'Plantillas corporativas para empresas que desean una presencia en línea profesional y confiable.',
         icon: 'tabler:template',
       },
       {
         title: 'Branding',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+          'Diseños especializados en la construcción y fortalecimiento de marcas en el entorno digital.',
         icon: 'tabler:template',
       },
       {
-        title: 'Medical',
+        title: 'Médico',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+          'Plantillas para profesionales y clínicas del sector salud, centradas en la confianza y la información.',
         icon: 'tabler:template',
       },
       {
-        title: 'Fashion Design',
+        title: 'Diseño de Moda',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+          'Ideales para diseñadores de moda que quieren destacar sus colecciones y atraer a un público exclusivo.',
         icon: 'tabler:template',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      alt: 'Imagen colorida',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Nuestros valores"
+    subtitle="En Announce Me, valoramos la satisfacción del cliente, la mejora continua y las prácticas éticas en todos nuestros proyectos."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Enfoque centrado en el cliente',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'Nos esforzamos por entender y satisfacer las necesidades específicas de cada cliente, ofreciendo soluciones personalizadas.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Mejora constante',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Buscamos siempre mejorar y evolucionar nuestros servicios para mantenernos a la vanguardia del sector digital.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Prácticas éticas',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Operamos con integridad y transparencia, asegurando que todas nuestras prácticas sean justas y responsables.',
       },
     ]}
   />
@@ -146,29 +142,29 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Logros"
+    subtitle="Nuestros logros reflejan nuestro compromiso con la excelencia y la satisfacción del cliente."
     isReversed={true}
     callToAction={{
-      text: 'See more',
+      text: 'Ver más',
       href: '/',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        title: 'Alcance global',
+        description: 'Hemos ayudado a empresas de todo el mundo a mejorar su presencia en línea.',
         icon: 'tabler:globe',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Comentarios positivos',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+          'Nuestros clientes valoran nuestra dedicación y los resultados que hemos logrado juntos.',
         icon: 'tabler:message-star',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Premios y reconocimientos',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+          'Hemos sido reconocidos como líderes en la industria por nuestro trabajo excepcional.',
         icon: 'tabler:award',
       },
     ]}
@@ -177,25 +173,25 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
+    title="Nuestras ubicaciones"
+    tagline="Encuéntranos"
     columns={4}
     items={[
       {
         title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        description: '<img src="/src/assets/icons/estados-unidos.png" alt="Bandera de EE.UU" style="width: 20px; margin-right: 8px;" /> 12345, Miami',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'España',
+        description: '<img src="/src/assets/icons/espana.png" alt="Bandera de España" style="width: 20px; margin-right: 8px;" /> 56789, Madrid',
       },
       {
         title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        description: '<img src="/src/assets/icons/australia.png" alt="Bandera de Australia" style="width: 20px; margin-right: 8px;" /> 90123, Sydney',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Brasil',
+        description: '<img src="/src/assets/icons/brazil.png" alt="Bandera de Brasil" style="width: 20px; margin-right: 8px;" /> 34567, São Paulo',
       },
     ]}
   />
@@ -203,20 +199,20 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Soporte técnico"
+    tagline="Contáctanos"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Chatea con nosotros',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+          'Ofrecemos soporte en tiempo real a través de nuestro chat en línea para resolver tus dudas al instante.',
         icon: 'tabler:messages',
       },
       {
-        title: 'Call us',
+        title: 'Llámanos',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+          'Puedes llamarnos para recibir asistencia personalizada y resolver cualquier problema que tengas.',
         icon: 'tabler:headset',
       },
     ]}
