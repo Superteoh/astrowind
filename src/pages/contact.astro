@@ -2,16 +2,53 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
-
+import { sendEmail } from '~/utils/email';
 
 const metadata = {
   title: 'Contact',
 };
+
+let errors = { name: "", email: "", message: "", subject: "" };
+
+if (Astro.request.method === 'POST') {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name")?.toString() || "";
+    const email = data.get("email")?.toString() || "";
+    const message = data.get("message")?.toString() || "";
+    const subject = data.get("subject")?.toString() || "";
+
+    console.log("Form data received:", { name, email, message, subject });
+
+    // Validación de los campos
+    if (!name) errors.name = "Name is required";
+    if (!email) errors.email = "Email is required";
+    if (!message) errors.message = "Message is required";
+    if (!subject) errors.subject = "Subject is required";
+
+    const hasErrors = Object.values(errors).some(msg => msg);
+
+    if (!hasErrors) {
+      const payload = {
+        name: name,
+        email: email,
+        html: message,
+        subject: subject,
+      };
+      console.log("Sending email with payload:", payload);
+      await sendEmail(payload);
+      console.log("Email sent successfully");
+    } else {
+      console.log("Validation errors:", errors);
+    }
+
+  } catch (error) {
+    console.error("Error processing form data:", error);
+  }
+}
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
   <HeroText tagline="Contactar" title="Contacta con nosotros" />
   <ContactUs
     id="form"
@@ -28,13 +65,17 @@ const metadata = {
         name: 'email',
         label: 'Email',
       },
+      {
+        type: 'text',
+        name: 'subject',
+        label: 'Asunto',
+      },
     ]}
     textarea={{
       label: 'Mensaje',
     }}
     disclaimer={{
-      label:
-        'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
+      label: 'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
     }}
     description="Nuestro equipo de soporte suele responder en un plazo de 24 horas."
   />
